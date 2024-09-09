@@ -1,0 +1,394 @@
+body{
+    background-color: lightgray;
+}
+ 
+.composition-mosaico--desk {
+    display: block;
+}
+.composition-mosaico {
+    width: 100%;
+    height: 70vw;
+    position: relative;
+    margin: 0;
+    margin-top: 10vw;
+}
+ 
+/* composition-mosaico__text */
+.composition-mosaico__text--0 {
+    top: 55%;
+    left: 25%;
+    transform: translate3d(-50%, -50%, 0) rotate(90deg);
+}
+ 
+.composition-mosaico__text--1 {
+    top: 45%;
+    left: 70%;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+}
+ 
+.composition-mosaico__text {
+    z-index: 5;
+    color: #fff;
+    font-size: 9vw;
+    position: absolute;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: all 1000ms cubic-bezier(.785,.135,.15,.86);
+}
+ 
+.composition-mosaico__bg {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100vw;
+    position: absolute;
+    pointer-events: none;
+}
+ 
+/*img {*/
+/*    overflow-clip-margin: content-box;*/
+/*    overflow: clip;*/
+/*    vertical-align: baseline;*/
+/*}*/
+ 
+/*a {*/
+/*    text-decoration: none !important;*/
+/*    color: inherit;*/
+/*        vertical-align: baseline;*/
+/*}*/
+ 
+/* composition-mosaico__tassello */
+ 
+.composition-mosaico__tassello {
+    width: 18vw;
+    height: 16.36vw;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    background-image: none;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 200ms linear, top 800ms cubic-bezier(.785,.135,.15,.86), left 800ms cubic-bezier(.785,.135,.15,.86);
+}
+ 
+.composition-mosaico__tassello::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: ' ';
+    display: block;
+    position: absolute;
+    transition: all 200ms linear;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: none;
+    background-size: cover;
+    background-color: #b4b4b4;
+}
+ 
+.composition-mosaico__tassello.remove-after::after {
+    background-image: none;
+    background-color: transparent;
+    content: none; /* This removes any content inside the :after */
+}
+ 
+.composition-mosaico__tassello-name {
+    font-family: ubuntu, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: all 250ms linear;
+}
+ 
+.composition-mosaico__tassello:hover .composition-mosaico__tassello-name {
+    opacity: 0;
+    pointer-events: none;
+}
+ 
+.composition-mosaico__tassello-content {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    font-size: 25px;
+    font-weight: 700;
+    z-index: 10;
+    font-family: ubuntu, sans-serif;
+    transition: all 250ms linear;
+    box-shadow: inset 0 0 0 6vw #fff;
+}
+ 
+.composition-mosaico__tassello:hover .composition-mosaico__tassello-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+ 
+.composition-mosaico__tassello-content span:first-child {
+    width: 100%;
+    top: 3.4vw;
+    left: 50%;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+ 
+.composition-mosaico__tassello-content span:last-child {
+    bottom: 2.72vw;
+    left: 50%;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+ 
+.composition-mosaico__tassello--1 {
+    top: -3vw;
+    left: 24.54vw;
+}
+ 
+.composition-mosaico__tassello--1:after {
+    background-image: url(https://www.sicis.com/themes/custom/sicis/assets/imgs/homepage/mosaico/bg/vetrite.webp);
+}
+ 
+/* .composition-mosaico__tassello--1:hover{
+    top: 1.2vw;
+  left: 27.30vw;
+} */
+ 
+ 
+.composition-mosaico__tassello--2 {
+    top: 0;
+    left: 49.09vw;
+    width: 36vw;
+    }  
+    .composition-mosaico__tassello--2::before {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    content: " ";
+    display: block;
+    margin-left: -1px;
+    background: #fff;
+    position: absolute;
+    }
+    .composition-mosaico__tassello--2:after {
+        background-image: url(https://www.sicis.com/themes/custom/sicis/assets/imgs/homepage/mosaico/bg/arredo.webp);
+}
+ 
+/* .composition-mosaico__tassello--2:hover{
+    top: 1.2vw;
+  left: 45.30vw;
+  width: 36vw;
+} */
+ 
+ 
+ 
+.composition-mosaico__tassello--3 {
+    top: 16.36vw;
+    left: 2.72vw;
+}
+ 
+.composition-mosaico__tassello--3:after {
+    background-image: url(https://www.sicis.com/themes/custom/sicis/assets/imgs/homepage/mosaico/bg/mosaico.webp);
+}
+ 
+/* .composition-mosaico__tassello--3:hover {
+    top: 17.46vw;
+    left: 9.27vw;
+} */
+ 
+.composition-mosaico__tassello--4 {
+    top: 21.81vw;
+    left: 25.45vw;
+}
+ 
+.composition-mosaico__tassello--4:after {
+    background-image: url(https://www.sicis.com/themes/custom/sicis/assets/imgs/homepage/mosaico/bg/jewels.webp);
+}
+ 
+/* .composition-mosaico__tassello--4:hover {
+    top: 17.56vw;
+    left: 27.25vw;
+} */
+ 
+.composition-mosaico__tassello--5 {
+    top: 20.9vw;
+    left: 48.18vw;
+}
+ 
+.composition-mosaico__tassello--5:after {
+    background-image: url(https://www.sicis.com/themes/custom/sicis/assets/imgs/homepage/mosaico/bg/tessuti.webp);
+}
+ 
+/* .composition-mosaico__tassello--5:hover {
+    top: 17.56vw;
+    left: 45.25vw;
+} */
+ 
+.composition-mosaico__tassello--6 {
+    top: 40.45vw;
+    left: 59.09vw;
+}
+ 
+.composition-mosaico__tassello--6:after {
+    background-image: url(https://www.sicis.com/themes/custom/sicis/assets/imgs/homepage/mosaico/bg/marble.webp);
+}
+ 
+/* .composition-mosaico__tassello--6:hover {
+    top: 33.9vw;
+    left: 45.29vw;
+} */
+ 
+/* composition-mosaico line */
+.composition-mosaico .line {
+    z-index: 10;
+    opacity: .5;
+    background: #fff;
+}
+.line--vert {
+    width: 1px;
+}
+.line {
+    background-color: #b4b4b4;
+    position: absolute;
+    z-index: -1;
+    transition: all 1000ms 500ms ease-in-out;
+}
+ 
+.composition-mosaico .line--oriz0 {
+    left: 0;
+    top: 1.18vw;
+    width: 85%;
+}
+ 
+.line--oriz {
+    height: 1px;
+}
+.composition-mosaico .line--vert0 {
+    top: 20%;
+    left: 27.27vw;
+    height: 60%;
+}
+.composition-mosaico .line--vert1 {
+    top: 0%;
+    left: 45.27vw;
+    height: 90%;
+}
+.composition-mosaico .line--vert2 {
+    top: 50%;
+    left: 63.2vw;
+    height: 50%;
+}
+.composition-mosaico .line--vert3 {
+    top: -5%;
+    left: 81.27vw;
+    height: 60%;
+}
+.composition-mosaico .line--oriz0 {
+    left: 0;
+    top: 1.18vw;
+    width: 85%;
+}
+.composition-mosaico .line--oriz1 {
+    top: 17.5vw;
+    right: 0;
+    width: 100%;
+}
+.composition-mosaico .line--oriz2 {
+    left: 0;
+    top: 33.85vw;
+    width: 100%;
+}
+.composition-mosaico .line--oriz3 {
+    left: 0;
+    top: 50.1vw;
+    width: 90%;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+.composition-mosaico__tassello:hover .composition-mosaico__tassello-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+ 
+.composition-mosaico__tassello:hover .composition-mosaico__tassello-name {
+    opacity: 0;
+    pointer-events: none;
+}
+ 
+.composition-mosaico--active .composition-mosaico__tassello:after {
+    opacity: 0;
+}
+ 
+.composition-mosaico--active .composition-mosaico__text--0 {
+    top: 25%;
+}
+ 
+.composition-mosaico--active .composition-mosaico__text--1 {
+    left: 75%;
+}
+ 
+.composition-mosaico--active .composition-mosaico__tassello--1 {
+    top: 1.18vw;
+    left: 27.27vw;
+}
+ 
+.composition-mosaico--active .composition-mosaico__tassello--2 {
+    top: 1.18vw;
+    left: 45.27vw;
+}
+ 
+.composition-mosaico--active .composition-mosaico__tassello--3 {
+    top: 17.5vw;
+    left: 9.27vw;
+}
+ 
+.composition-mosaico--active .composition-mosaico__tassello--4 {
+    top: 17.5vw;
+    left: 27.27vw;
+}
+ 
+.composition-mosaico--active .composition-mosaico__tassello--5 {
+    top: 17.5vw;
+    left: 45.27vw;
+}
+ 
+.composition-mosaico--active .composition-mosaico__tassello--6 {
+    top: 33.8vw;
+    left: 45.27vw;
+}
+ 
+.composition-mosaico--active .composition-mosaico__tassello {
+    border: 1px solid #fff;
+}
